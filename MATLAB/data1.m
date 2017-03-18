@@ -10,7 +10,8 @@ fs = 600;
 
 
 x=dlmread('../DATA/matrixFile.txt');
-x = readtable('Data/amplitudes_1.txt');    
+x = readtable('test_amplitudes.txt');
+figure();plot(1:2001,x{:,1:29})
 L   = length(x);
 
 t   = (0:(L-1)) ./ fs;
