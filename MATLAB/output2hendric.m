@@ -18,10 +18,8 @@ fprintf(fid,fmt,y');
 fclose(fid);
 fid = fopen(sprintf('%s%s%s_amplitudes.txt',outdir,filesep,prefix),'w');
 for ii=1:n
-y(:,ii) = c3nl_scale(tmp(:,ii),'col',2/(ii+1),2/(ii)) ;
+y(:,ii) = c3nl_scale(tmp(:,ii),'col',1/(ii+1),1/(ii)) ;
 end
-
-y = tmp .* repmat([(1:n)*100],size(tmp,1),1);
 fprintf(fid,fmt,y');
 fclose(fid);
 
