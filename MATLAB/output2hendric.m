@@ -13,7 +13,7 @@ y =  zeros(win+1,n);
 for ii=1:n
 y(:,ii) = c3nl_scale(tmp(:,ii),'col',(ii-1)*100,ii*100) ;
 end
-%figure();plot(y(:,1));hold on
+%figure();plot(y);hold on
 fprintf(fid,fmt,y');
 fclose(fid);
 fid = fopen(sprintf('%s%s%s_amplitudes.txt',outdir,filesep,prefix),'w');
