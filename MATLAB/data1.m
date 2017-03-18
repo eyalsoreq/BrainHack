@@ -33,7 +33,7 @@ tmp = tmp/max(max(tmp));
 y = []
 tmp = Theta(:,1:30,1)
 for i=1:30
-    y(:,i) = 130*i +smooth(tmp(:,i),500)*i*100;
+    y(:,i) = 130*i+tmp(:,i)*i*100;
 end
 
 plot(y)
@@ -54,7 +54,7 @@ y = x(:,startIND:startIND+nPartials-1);
 y = y/max(max(y));
     
 for i=1:30
-    y(:,i) =  0.2+(1    /(1*i)) + (0.2*tmp(:,i)/(0.05*i));
+    y(:,i) =  0.2+(1/(1*i))+(0.2*tmp(:,i)/(0.05*i));
 end
 
 plot(y)
