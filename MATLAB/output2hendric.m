@@ -21,12 +21,16 @@ for ii=1:n
     y1(:,ii) = c3nl_scale(tmp1(:,ii),'col',(ii-1)*100,ii*100) ;
 end
 %figure();plot(y);hold on
+
+ix = find(tmp1(:,1) == 0);
+%y1(ix,:) = 0;
 fprintf(fid,fmt,y1');
 fclose(fid);
 fid = fopen(sprintf('%s%s%s_amplitudes.txt',outdir,filesep,prefix),'w');
 for ii=1:n
 y2(:,ii) = c3nl_scale(tmp2(:,ii),'col',1/(ii+1),1/(ii)) ;
 end
+y2(ix,:) = 0;
 fprintf(fid,fmt,y2');
 fclose(fid);
 
