@@ -33,6 +33,9 @@ end
 y2(ix,:) = 0;
 fprintf(fid,fmt,y2');
 fclose(fid);
+tt = repmat(cos(-pi:pi/(size(tmp2,1)/2):pi),30,1);
+tt1 = repmat(sin(-pi:pi/15:pi),size(tmp2,1),1);
 
-
+clf;imagesc(tt(:,1:end-1)'.*tt1(:,1:end-1))
+clf
 end
