@@ -14,8 +14,8 @@ formants = bsxfun(@times, formants,1./var(formants,1))*0.1;
 
 formant_freq = [0 0.25 0.5 0.75 1]*4;
 formant_amp =  [0.5 1 0.5 1 0.1];
-freqs = linspace(0,4);
-nsamples = 5*60*5;
+freqs = linspace(0,4,30);
+nsamples = 5*60*50;
 
 spectral_envelope = zeros(nsamples, length(freqs));
 
